@@ -1,6 +1,7 @@
 <?php
 $arr_url = [
-  'https://thevirus.in.th:8443/modules/git/public/web-hook.php?uuid=b9f6bd2f-db56-bb35-c08c-494a990409b9'
+  'kqkys.trialims.com' => 'https://cloud-eros.com:8443/modules/git/public/web-hook.php?uuid=c2629d41-aa16-411c-9e67-0acc4a20b4f3',
+  'agdmz.trialims.com' => 'https://cloud-eros.com:8443/modules/git/public/web-hook.php?uuid=84c8e3c2-5a87-004a-50af-bee689f0eaf3',
 ];
 
 $ch = curl_init();
@@ -15,8 +16,7 @@ $output = curl_exec($ch);
 
 foreach ($arr_url as $key => $value) {
   curl_setopt($ch, CURLOPT_URL, $value);
-  $output = curl_exec($ch);
-  var_dump($output);
+  curl_exec($ch);
 }
 
 curl_close($ch);
